@@ -20,6 +20,8 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>WE need your camera Usage to get the games photo</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>we need your existing photo for the App</string>
 	<key>UILaunchStoryboardName</key>

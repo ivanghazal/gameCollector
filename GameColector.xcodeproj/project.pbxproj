@@ -102,7 +102,7 @@
 				TargetAttributes = {
 					EBF987511ED22561004139FB = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = XY9ASL8HRQ;
+						DevelopmentTeam = 2US9Z34Y52;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -269,8 +269,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XY9ASL8HRQ;
+				DEVELOPMENT_TEAM = 2US9Z34Y52;
 				INFOPLIST_FILE = GameColector/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.se7ensoft.GameColector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -282,8 +283,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XY9ASL8HRQ;
+				DEVELOPMENT_TEAM = 2US9Z34Y52;
 				INFOPLIST_FILE = GameColector/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.se7ensoft.GameColector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -310,6 +312,7 @@
 				EBF987691ED22561004139FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
