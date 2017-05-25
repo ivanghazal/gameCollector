@@ -9,7 +9,7 @@
 import UIKit
 
 
-class GameViewController: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate {
+class GameViewController: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate , UITextViewDelegate {
 
     @IBOutlet weak var addUpdateButton: UIButton!
     
@@ -18,6 +18,11 @@ class GameViewController: UIViewController , UIImagePickerControllerDelegate , U
     @IBOutlet weak var titleTextField: UITextField!
     
     @IBOutlet weak var deleteButton: UIButton!
+    
+    @IBOutlet weak var descriptionTextView: UITextView!
+  
+    @IBOutlet weak var okPopupButton: UIButton!
+    
     var imagePicker = UIImagePickerController()
     
     var game : Game? = nil
@@ -33,15 +38,23 @@ class GameViewController: UIViewController , UIImagePickerControllerDelegate , U
         
             mainImageView.image = UIImage(data : game!.image! as Data )
             titleTextField.text = game!.title
+            descriptionTextView.text = game!.descriptionFull
+            
             
             addUpdateButton.setTitle("Update", for: .normal)
             deleteButton.isHidden = false
-
-            
         }
+        
+        // for declare the description text view
+        descriptionTextView.delegate = self
+        
+        okPopupButton.isHidden = true
         
     }
 
+    @IBAction func okPopupButtonDidTouch(_ sender: Any) {
+        print ("ok")
+    }
 
     @IBAction func addButtonDidTouch(_ sender: Any) {
         
@@ -50,6 +63,7 @@ class GameViewController: UIViewController , UIImagePickerControllerDelegate , U
         
             game!.title = titleTextField.text
             game!.image = UIImagePNGRepresentation(mainImageView.image!)! as NSData
+            game!.descriptionFull = descriptionTextView.text
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             navigationController!.popViewController(animated: true)
             
@@ -61,6 +75,7 @@ class GameViewController: UIViewController , UIImagePickerControllerDelegate , U
             let game = Game(context: context)
             game.title = titleTextField.text
             game.image = UIImagePNGRepresentation(mainImageView.image!)! as NSData
+            game.descriptionFull = descriptionTextView.text
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             navigationController!.popViewController(animated: true)
             
@@ -99,6 +114,23 @@ class GameViewController: UIViewController , UIImagePickerControllerDelegate , U
         
     }
     
+    // build place hint for uitextview 
     
+    func textViewDidBeginEditing(_ textView: UITextView) {
+       
+        if  game?.descriptionFull == nil {
+            descriptionTextView.text = ""
+        }
+        
+     
+        print(descriptionTextView.layer.zPosition)
+        descriptionTextView.frame = CGRect(x: 0, y: 80, width: self.view.frame.width , height: self.view.frame.height - 80)
+        descriptionTextView.layer.zPosition = 100;
+        okPopupButton.isHidden = false
+        okPopupButton.layer.zPosition = 101
+ 
+    }
+    
+
     
 }

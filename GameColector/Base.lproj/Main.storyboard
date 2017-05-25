@@ -77,31 +77,58 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXY-wM-82A">
-                                <rect key="frame" x="145" y="302" width="30" height="30"/>
+                                <rect key="frame" x="145" y="420" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addButtonDidTouch:" destination="xgV-ZV-Vji" eventType="touchUpInside" id="DO6-9N-35R"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXS-3p-X0X">
-                                <rect key="frame" x="138" y="362" width="45" height="30"/>
+                                <rect key="frame" x="138" y="450" width="45" height="30"/>
                                 <state key="normal" title="Delete"/>
                                 <connections>
                                     <action selector="addButtonDidTouch:" destination="xgV-ZV-Vji" eventType="touchUpInside" id="gEF-vp-aNV"/>
                                     <action selector="deleteButtonDidTouch:" destination="xgV-ZV-Vji" eventType="touchUpInside" id="Da7-d1-ECV"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter description about your note !" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hyB-KG-TCW">
+                                <rect key="frame" x="40" y="277" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.95181254475249855" green="0.95181254475249855" blue="0.95181254475249855" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="0ki-iI-HBv"/>
+                                    <constraint firstAttribute="height" constant="128" id="4AD-Yb-PIF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53J-FE-7fn">
+                                <rect key="frame" x="20" y="518" width="280" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="7b7-Li-aLO"/>
+                                </constraints>
+                                <state key="normal" title="ok">
+                                    <color key="titleColor" red="0.95181254475249855" green="0.95181254475249855" blue="0.95181254475249855" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="okPopupButtonDidTouch:" destination="xgV-ZV-Vji" eventType="touchUpInside" id="Zjc-ia-SgB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gXS-3p-X0X" firstAttribute="centerX" secondItem="Sbj-dC-a6b" secondAttribute="centerX" id="3Wm-9v-HFH"/>
-                            <constraint firstItem="TXY-wM-82A" firstAttribute="centerX" secondItem="Sbj-dC-a6b" secondAttribute="centerX" id="AiB-jD-oKC"/>
+                            <constraint firstItem="hyB-KG-TCW" firstAttribute="centerX" secondItem="Sbj-dC-a6b" secondAttribute="centerX" id="Cjs-XD-eMH"/>
                             <constraint firstItem="38l-Hc-gcK" firstAttribute="top" secondItem="gFr-0l-NM9" secondAttribute="bottom" constant="20" id="Dg7-94-laB"/>
+                            <constraint firstItem="TXY-wM-82A" firstAttribute="top" secondItem="hyB-KG-TCW" secondAttribute="bottom" constant="15" id="GnX-BN-4iR"/>
                             <constraint firstItem="38l-Hc-gcK" firstAttribute="centerX" secondItem="Sbj-dC-a6b" secondAttribute="centerX" id="Hzk-q0-o7Y"/>
                             <constraint firstItem="gFr-0l-NM9" firstAttribute="centerX" secondItem="Sbj-dC-a6b" secondAttribute="centerX" id="Jro-2d-m0m"/>
-                            <constraint firstItem="TXY-wM-82A" firstAttribute="top" secondItem="38l-Hc-gcK" secondAttribute="bottom" constant="40" id="rmc-SA-JfN"/>
+                            <constraint firstItem="hyB-KG-TCW" firstAttribute="top" secondItem="38l-Hc-gcK" secondAttribute="bottom" constant="15" id="MAA-7P-zvI"/>
+                            <constraint firstItem="53J-FE-7fn" firstAttribute="centerX" secondItem="Sbj-dC-a6b" secondAttribute="centerX" id="MpL-ex-1Dh"/>
+                            <constraint firstItem="TXY-wM-82A" firstAttribute="centerX" secondItem="Sbj-dC-a6b" secondAttribute="centerX" id="R6A-YG-1ut"/>
+                            <constraint firstItem="xqh-Dz-58J" firstAttribute="top" secondItem="53J-FE-7fn" secondAttribute="bottom" constant="20" id="TVT-4Y-LjD"/>
+                            <constraint firstItem="gXS-3p-X0X" firstAttribute="top" secondItem="TXY-wM-82A" secondAttribute="bottom" id="hIJ-9V-MK3"/>
+                            <constraint firstItem="gXS-3p-X0X" firstAttribute="centerX" secondItem="Sbj-dC-a6b" secondAttribute="centerX" id="i2N-av-g2T"/>
                             <constraint firstItem="38l-Hc-gcK" firstAttribute="width" secondItem="gFr-0l-NM9" secondAttribute="width" id="tiB-GX-iTD"/>
-                            <constraint firstItem="gXS-3p-X0X" firstAttribute="top" secondItem="TXY-wM-82A" secondAttribute="bottom" constant="30" id="unB-4l-lwj"/>
                             <constraint firstItem="gFr-0l-NM9" firstAttribute="top" secondItem="2F2-6e-VfY" secondAttribute="bottom" constant="20" id="vyq-NJ-ff6"/>
                         </constraints>
                     </view>
@@ -122,7 +149,9 @@
                     <connections>
                         <outlet property="addUpdateButton" destination="TXY-wM-82A" id="Wjd-Ix-aJe"/>
                         <outlet property="deleteButton" destination="gXS-3p-X0X" id="k8T-Sa-aLM"/>
+                        <outlet property="descriptionTextView" destination="hyB-KG-TCW" id="VXt-Ga-lq0"/>
                         <outlet property="mainImageView" destination="gFr-0l-NM9" id="Ce9-5E-kU1"/>
+                        <outlet property="okPopupButton" destination="53J-FE-7fn" id="m0Z-2M-qmY"/>
                         <outlet property="titleTextField" destination="38l-Hc-gcK" id="YpS-7V-vfn"/>
                     </connections>
                 </viewController>
