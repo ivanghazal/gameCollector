@@ -20,6 +20,8 @@ class ViewController: UIViewController ,UITableViewDelegate ,UITableViewDataSour
         gameTableView.dataSource = self
         gameTableView.delegate = self
         
+        
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -44,7 +46,9 @@ class ViewController: UIViewController ,UITableViewDelegate ,UITableViewDataSour
         
         let game = games[indexPath.row]
         cell.textLabel?.text = game.title
+
         cell.imageView?.image = UIImage(data : game.image! as Data )
+
         return cell
         
     }

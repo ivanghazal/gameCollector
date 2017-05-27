@@ -91,7 +91,7 @@
                                     <action selector="deleteButtonDidTouch:" destination="xgV-ZV-Vji" eventType="touchUpInside" id="Da7-d1-ECV"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter description about your note !" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hyB-KG-TCW">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter description about your note !" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hyB-KG-TCW" customClass="SpringTextView" customModule="GameColector" customModuleProvider="target">
                                 <rect key="frame" x="40" y="277" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.95181254475249855" green="0.95181254475249855" blue="0.95181254475249855" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -101,7 +101,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53J-FE-7fn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53J-FE-7fn" customClass="SpringButton" customModule="GameColector" customModuleProvider="target">
                                 <rect key="frame" x="20" y="518" width="280" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -114,6 +114,16 @@
                                     <action selector="okPopupButtonDidTouch:" destination="xgV-ZV-Vji" eventType="touchUpInside" id="Zjc-ia-SgB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocl-dd-mQ6">
+                                <rect key="frame" x="288" y="383" width="18" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="OtH-p9-RSw"/>
+                                    <constraint firstAttribute="width" constant="18" id="qsX-fM-FWb"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="exlargeButtonDidTouch:" destination="xgV-ZV-Vji" eventType="touchUpInside" id="Cy2-i4-AUB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -124,12 +134,14 @@
                             <constraint firstItem="gFr-0l-NM9" firstAttribute="centerX" secondItem="Sbj-dC-a6b" secondAttribute="centerX" id="Jro-2d-m0m"/>
                             <constraint firstItem="hyB-KG-TCW" firstAttribute="top" secondItem="38l-Hc-gcK" secondAttribute="bottom" constant="15" id="MAA-7P-zvI"/>
                             <constraint firstItem="53J-FE-7fn" firstAttribute="centerX" secondItem="Sbj-dC-a6b" secondAttribute="centerX" id="MpL-ex-1Dh"/>
+                            <constraint firstItem="ocl-dd-mQ6" firstAttribute="leading" secondItem="hyB-KG-TCW" secondAttribute="trailing" constant="8" id="QJA-uB-242"/>
                             <constraint firstItem="TXY-wM-82A" firstAttribute="centerX" secondItem="Sbj-dC-a6b" secondAttribute="centerX" id="R6A-YG-1ut"/>
                             <constraint firstItem="xqh-Dz-58J" firstAttribute="top" secondItem="53J-FE-7fn" secondAttribute="bottom" constant="20" id="TVT-4Y-LjD"/>
                             <constraint firstItem="gXS-3p-X0X" firstAttribute="top" secondItem="TXY-wM-82A" secondAttribute="bottom" id="hIJ-9V-MK3"/>
                             <constraint firstItem="gXS-3p-X0X" firstAttribute="centerX" secondItem="Sbj-dC-a6b" secondAttribute="centerX" id="i2N-av-g2T"/>
                             <constraint firstItem="38l-Hc-gcK" firstAttribute="width" secondItem="gFr-0l-NM9" secondAttribute="width" id="tiB-GX-iTD"/>
                             <constraint firstItem="gFr-0l-NM9" firstAttribute="top" secondItem="2F2-6e-VfY" secondAttribute="bottom" constant="20" id="vyq-NJ-ff6"/>
+                            <constraint firstItem="ocl-dd-mQ6" firstAttribute="top" secondItem="hyB-KG-TCW" secondAttribute="bottom" constant="-22" id="w5s-2p-1NI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="D9m-MB-NTh">
